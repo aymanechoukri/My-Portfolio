@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  </head>
+  <body>
+    <!-- Fixed Navbar -->
+    <div data-aos="fade-up" class="heading">
+      <div class="title">
+        <h1 data-aos="fade-up">Life</h1>
+        <span data-aos="fade-up">Coding</span>
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><a data-aos="fade-up" class="nav-link" href="#hero">Home</a></li>
+          <li><a data-aos="fade-up" class="nav-link" href="#project">Project</a></li>
+          <li><a data-aos="fade-up" class="nav-link" href="#about">About</a></li>
+          <li><a data-aos="fade-up" class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main>
+      <!-- Hero Section -->
+      <header data-aos="fade-up" id="hero">
+        <div class="heading-2">
+          <div class="me">
+            <img
+              src="71cbd99b-912b-4bca-aeac-a8ca156ce01d.jpg"
+              alt="my picture"
+              class="pictur"
+              loading="lazy"
+            />
+            <h2 data-aos="fade-up">My Name Is Aymane Chokri</h2>
+            <p data-aos="fade-up">Full Stack Web Developer</p>
+          </div>
+          <img
+            src="vecteezy_web-developer-png-graphic-clipart-design_23485804.png"
+            alt="logo"
+            data-aos="fade-up"
+            class="logo"
+            loading="lazy"
+          />
+        </div>
+      </header>
+
+      <!-- Social Media -->
+      <div class="media">
+        <a
+          href="https://github.com/aymanechoukri"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i data-aos="fade-up" class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/aymane-chokri-8750a6321/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i data-aos="fade-up" class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
+      <!-- Projects Section -->
+      <section data-aos="fade-up" id="project">
+        <h2 data-aos="fade-up">My Projects</h2>
+        <div class="carts">
+          <div class="cart" data-aos="fade-up">
+            <img
+              class="content"
+              src="Capture d’écran 2025-10-03 182708.png"
+              alt="store Game"
+            />
+            <div class="info">
+              <h3>Store Game</h3>
+              <a
+                href="https://aymanechoukri.github.io/Store-Gaming/"
+                class="info-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Show</a
+              >
+            </div>
+            <p class="dis">This is a complete web game store. Html / Css</p>
+          </div>
+
+          <div class="cart" data-aos="fade-up" data-aos-delay="100">
+            <img
+              class="content"
+              src="Capture d’écran 2025-10-03 182406.png"
+              alt="photogallery"
+            />
+            <div class="info">
+              <h3>Photo Gallery</h3>
+              <a
+                href="https://aymanechoukri.github.io/Photo-Gallery/"
+                class="info-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Show</a
+              >
+            </div>
+            <p class="dis">This is a complete web photogallery. Html / Css</p>
+          </div>
+
+          <div class="cart" data-aos="fade-up" data-aos-delay="200">
+            <img
+              class="content"
+              src="Capture d’écran 2025-10-03 182012.png"
+              alt="Restaurant"
+            />
+            <div class="info">
+              <h3>Restaurant</h3>
+              <a
+                href="https://aymanechoukri.github.io/Restaurant/"
+                class="info-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Show</a
+              >
+            </div>
+            <p class="dis">This is a complete web Restaurant. Html / Css</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section data-aos="fade-up" id="about">
+        <div class="about-info">
+          <h2>About</h2>
+          <p>
+            My name is Aymane Chokri, I am 21 years old from Morocco, a beginner
+            web developer and I have great ambition to become a full-stack web
+            developer. I am excited about this result.
+          </p>
+        </div>
+
+        <div class="skills-info">
+          <h2>Skills</h2>
+          <div class="icon">
+            <img
+              src="vecteezy_stylized-3d-html-logo-design_12697299.png"
+              alt="html"
+              width="60"
+            />
+            <img
+              src="vecteezy_stylized-3d-css-icon-side-view_11665094.png"
+              alt="Css"
+              width="60"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <div data-aos="fade-up" class="certifications">
+        <h2>Certifications</h2>
+        <div class="carts">
+          <div class="cart" data-aos="fade-up">
+            <img
+              class="content"
+              src="www.freecodecamp.org_certification_aymanchokri_responsive-web-design.png"
+              alt="freecodecamp"
+            />
+            <div class="info">
+              <h3>freeCodeCamp</h3>
+              <a
+                href="https://www.freecodecamp.org/certification/aymanchokri/responsive-web-design"
+                class="info-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Show</a
+              >
+            </div>
+            <p class="dis">
+              This certificate is from Free Code Camp in the web.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Contact -->
+    <footer data-aos="fade-up" id="contact">
+      <div class="footer-content">
+        <h2 data-aos="fade-up">Contact Me</h2>
+
+        <div class="contact-details">
+          <h3 data-aos="fade-up">Get In Touch</h3>
+          <div class="contact-info" data-aos="fade-up">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p>
+                <a href="mailto:chokriaymane2000@gmail.com"
+                  >chokriaymane2000@gmail.com</a
+                >
+              </p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p><a href="tel:+212674851005">0674851005</a></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p>Morocco - Safi</p>
+            </div>
+          </div>
+
+          <div class="social-links" data-aos="fade-up">
+            <a
+              href="https://github.com/aymanechoukri"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/aymane-chokri-8750a6321/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-container" data-aos="fade-up">
+          <h3>Send Me a Message</h3>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Your Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number (optional)"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Aymane Chokri. All rights reserved.</p>
+        <p>Built with passion 💜</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
