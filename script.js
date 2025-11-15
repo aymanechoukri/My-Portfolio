@@ -1,89 +1,103 @@
-// Initialize Vanta.js
-VANTA.NET({
-  el: "body",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.0,
-  minWidth: 200.0,
-  scale: 1.0,
-  scaleMobile: 1.0,
-  color: 0x898589,
-  backgroundColor: 0x181820,
-  points: 20.0,
-  maxDistance: 20.0,
-  spacing: 15.0,
-});
-
-// Initialize AOS
 AOS.init({
   duration: 1000,
   once: true,
   offset: 100,
+  delay: 0,        
+  mirror: false,      
+  anchorPlacement: 'top-bottom' 
 });
 
-// Image 3D effect
-const image = document.querySelector(".pictur");
 
-if (image) {
-  image.addEventListener("mousemove", (e) => {
-    const rect = image.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+const btn1 = document.getElementById("btn");
+const menu = document.getElementById("nav");
+const link = document.querySelectorAll("#link")
 
-    const rotateY = (x / rect.width - 0.5) * 30;
-    const rotateX = (y / rect.height - 0.5) * -30;
-
-    image.style.transform = `perspective(1000px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.05)`;
-  });
-
-  image.addEventListener("mouseleave", () => {
-    image.style.transform =
-      "perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)";
-  });
-}
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  });
+btn1.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const expanded = btn1.getAttribute("aria-expanded") === "true";
+  btn1.setAttribute("aria-expanded", String(!expanded));
+  menu.classList.toggle("show", !expanded);
 });
 
-// Handle form submission
-const contactForm = document.getElementById("contactForm");
-if (contactForm) {
-  contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
+document.addEventListener("click", (e) => {
+  if (!btn1.contains(e.target)) {
+    btn1.setAttribute("aria-expanded", "false");
+    menu.classList.remove("show");
+  }
+});
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\n` +
-        `Email: ${email}\n` +
-        `Phone: ${phone || "Not provided"}\n\n` +
-        `Message:\n${message}`
-    );
 
-    // Open default email client
-    window.location.href = `mailto:chokriaymane2000@gmail.com?subject=${subject}&body=${body}`;
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    btn1.setAttribute("aria-expanded", "false");
+    menu.classList.remove("show");
+  }
+});
 
-    // Optional: Show success message
-    alert("Thank you! Your message is being prepared in your email client.");
+const projects = [
+  {
+    img: "img/Capture d’écran 2025-10-03 182708.png",
+    title: "Store Games",
+    href: "https://aymanechoukri.github.io/Store-Gaming/",
+    description: "This is a complete web game store. Html / Css / js",
+    a: "Show"
+  },
 
-    // Reset form
-    contactForm.reset();
-  });
-}
+  {
+    img: "img/Capture d’écran 2025-10-03 182406.png",
+    title: "Photo Gallery",
+    href: "https://aymanechoukri.github.io/Photo-Gallery/",
+    description: "This is a complete web photogallery. Html / Css / js",
+    a: "Show"
+  },
+
+  {
+    img: "img/Capture d’écran 2025-10-03 182012.png",
+    title: "Restaurant",
+    href: "https://aymanechoukri.github.io/Restaurant/",
+    description: "This is a complete web Restaurant. Html / Css / js",
+    a: "Show"
+  },
+];
+
+const cards = document.getElementById("cardss");
+
+projects.forEach(project => {
+  const div = document.createElement("div");
+  div.setAttribute('data-aos', 'fade-up');
+  div.className = "cart";
+  div.innerHTML = `<img src="${project.img}" class="content">
+                  <div class="info">
+                  <h3>${project.title}</h3> <a href="${project.href}" class="info-link" target="_blank" rel="noopener noreferrer">${project.a}</a>
+                  </div>
+                  <p class="dis">${project.description}</p>
+                  `;
+                  cards.appendChild(div);
+});
+
+
+const icons = [
+  {
+    icon: "img/html.png",
+    alt: "Skill Html"
+  },
+
+  {
+    icon: "img/css.png",
+    alt: "Skill Css"
+  },
+
+  {
+    icon: "img/js.png",
+    alt: "Skill JS"
+  }
+];
+
+const skill = document.getElementById("skill");
+
+icons.forEach(icon => {
+  skill.innerHTML += `
+                    <img src="${icon.icon}" alt="${icon.alt}" width="50">
+  `;
+})

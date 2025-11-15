@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.146.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   </head>
   <body>
@@ -30,12 +29,13 @@
         <h1 data-aos="fade-up">Life</h1>
         <span data-aos="fade-up">Coding</span>
       </div>
-      <nav class="nav-bar">
+      <button id="btn" aria-expanded="false" aria-controls="nav">☰</button>
+      <nav class="nav-bar" id="nav" aria-labelledby="btn">
         <ul>
-          <li><a data-aos="fade-up" class="nav-link" href="#hero">Home</a></li>
-          <li><a data-aos="fade-up" class="nav-link" href="#project">Project</a></li>
-          <li><a data-aos="fade-up" class="nav-link" href="#about">About</a></li>
-          <li><a data-aos="fade-up" class="nav-link" href="#contact">Contact</a></li>
+          <li><a id="link" data-aos="fade-up" class="nav-link" href="#hero">Home</a></li>
+          <li><a id="link" data-aos="fade-up" class="nav-link" href="#project">Project</a></li>
+          <li><a id="link" data-aos="fade-up" class="nav-link" href="#about">About</a></li>
+          <li><a id="link" data-aos="fade-up" class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -46,16 +46,16 @@
         <div class="heading-2">
           <div class="me">
             <img
-              src="71cbd99b-912b-4bca-aeac-a8ca156ce01d.jpg"
+              src="img/71cbd99b-912b-4bca-aeac-a8ca156ce01d.jpg"
               alt="my picture"
               class="pictur"
               loading="lazy"
             />
             <h2 data-aos="fade-up">My Name Is Aymane Chokri</h2>
-            <p data-aos="fade-up">Full Stack Web Developer</p>
+            <p data-aos="fade-up">Web Developer</p>
           </div>
           <img
-            src="vecteezy_web-developer-png-graphic-clipart-design_23485804.png"
+            src="img/vecteezy_web-developer-png-graphic-clipart-design_23485804.png"
             alt="logo"
             data-aos="fade-up"
             class="logo"
@@ -85,64 +85,7 @@
       <!-- Projects Section -->
       <section data-aos="fade-up" id="project">
         <h2 data-aos="fade-up">My Projects</h2>
-        <div class="carts">
-          <div class="cart" data-aos="fade-up">
-            <img
-              class="content"
-              src="Capture d’écran 2025-10-03 182708.png"
-              alt="store Game"
-            />
-            <div class="info">
-              <h3>Store Game</h3>
-              <a
-                href="https://aymanechoukri.github.io/Store-Gaming/"
-                class="info-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Show</a
-              >
-            </div>
-            <p class="dis">This is a complete web game store. Html / Css</p>
-          </div>
-
-          <div class="cart" data-aos="fade-up" data-aos-delay="100">
-            <img
-              class="content"
-              src="Capture d’écran 2025-10-03 182406.png"
-              alt="photogallery"
-            />
-            <div class="info">
-              <h3>Photo Gallery</h3>
-              <a
-                href="https://aymanechoukri.github.io/Photo-Gallery/"
-                class="info-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Show</a
-              >
-            </div>
-            <p class="dis">This is a complete web photogallery. Html / Css</p>
-          </div>
-
-          <div class="cart" data-aos="fade-up" data-aos-delay="200">
-            <img
-              class="content"
-              src="Capture d’écran 2025-10-03 182012.png"
-              alt="Restaurant"
-            />
-            <div class="info">
-              <h3>Restaurant</h3>
-              <a
-                href="https://aymanechoukri.github.io/Restaurant/"
-                class="info-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Show</a
-              >
-            </div>
-            <p class="dis">This is a complete web Restaurant. Html / Css</p>
-          </div>
-        </div>
+        <div class="carts" id="cardss"></div>
       </section>
 
       <!-- About Section -->
@@ -158,18 +101,7 @@
 
         <div class="skills-info">
           <h2>Skills</h2>
-          <div class="icon">
-            <img
-              src="vecteezy_stylized-3d-html-logo-design_12697299.png"
-              alt="html"
-              width="60"
-            />
-            <img
-              src="vecteezy_stylized-3d-css-icon-side-view_11665094.png"
-              alt="Css"
-              width="60"
-            />
-          </div>
+          <div class="icon" id="skill"></div>
         </div>
       </section>
 
@@ -180,7 +112,7 @@
           <div class="cart" data-aos="fade-up">
             <img
               class="content"
-              src="www.freecodecamp.org_certification_aymanchokri_responsive-web-design.png"
+              src="img/www.freecodecamp.org_certification_aymanchokri_responsive-web-design.png"
               alt="freecodecamp"
             />
             <div class="info">
